@@ -595,7 +595,7 @@ footer p{
     .persona{
         width: 29%;
         left: 12%;
-        top: 14.5%;           
+        top: 6rem;           
     }
 
     .vector{
@@ -616,7 +616,7 @@ footer p{
     .persona{
         width: 24%;
         left: 12%; 
-        top: 19%;          
+        top: 6.5rem;          
     }
 
     .nombreProfesion{
@@ -627,9 +627,9 @@ footer p{
 
 @media screen and (min-width: 360px)  {
     .persona{
-        width: 29%;
+        width: 28%;
         left: 12%;
-        top: 14.5%;           
+        top: 7rem;           
     }
 
     .vector{
@@ -653,9 +653,9 @@ footer p{
         }
 
         .persona{
-            width: 33%;
+            width: 32%;
             left: 12%; 
-            top: 110px;          
+            top: 7rem;          
         }
 
         .redesSociales{
@@ -673,8 +673,8 @@ footer p{
     }
 
     .persona{
-        width: 27.5%;
-        top: 110px;           
+        width: 27%;
+        top: 7rem;           
     }
 
     .redesSociales{
@@ -690,8 +690,8 @@ footer p{
     }
 
     .persona{
-        width: 27%;
-        top: 12.5%;           
+        width: 26%;
+        top: 7.5rem;           
     }
 
     .redesSociales{
@@ -719,8 +719,8 @@ footer p{
                 
         .persona{
             left: 12%;
-            width: 30.5%;
-            top: 117px;
+            width: 30%;
+            top: 7.5rem;
         }
         
         .profesion{
@@ -736,7 +736,7 @@ footer p{
         
         .redesSociales{
             height: 10%;
-            width: 80%;
+            width: 60%;
         }
         
         .redesSociales div{
@@ -919,7 +919,7 @@ footer p{
         
         .persona{
             width: 33%;
-            top: 18.5%;
+            top: 8.5rem;
         }
         
         .nombreProfesion{
@@ -952,8 +952,8 @@ footer p{
         }
         
         .persona{
-            width: 29%;
-            top: 150px;
+            width: 28%;
+            top: 10rem;
         }
         
         .nombreProfesion{
@@ -1023,8 +1023,8 @@ footer p{
                
         .persona{
             left: 9%;   
-            width: 28.5%;
-            top: 210px;
+            width: 28%;
+            top: 13.5rem;
         }
                
         .nombreProfesion{
@@ -1234,8 +1234,8 @@ footer p{
             
             .persona{
                 left: 12%;   
-                width: 30%;
-                top: 19%;
+                width: 28%;
+                top: 15rem;
             }
 
             .nombreProfesion{
@@ -1259,7 +1259,7 @@ footer p{
         .persona{
             left: 10%;   
             width: 27%;
-            top: 17.5%;
+            top: 15rem;
         }
                
         .redesSociales{
@@ -1297,7 +1297,7 @@ footer p{
         .persona{
             left: 10%;   
             width: 28%;
-            top: 375px;
+            top: 23.5rem;
         }
                
         .nombreProfesion{
@@ -1466,8 +1466,9 @@ footer p{
     @media screen and ( min-width: 1280px ){
         .persona{
             left: 9%;   
-            width: 30%;
-            top: 56.5%;
+            width: 29%;
+            top: 
+            30rem;
         }
                 
         .redesSociales{
@@ -1528,8 +1529,8 @@ footer p{
         
         .persona{
             left: 7%;   
-            width: 28%;
-            top: 495px;
+            width: 27%;
+            top: 32.5rem;
         }
                
         .redesSociales{
