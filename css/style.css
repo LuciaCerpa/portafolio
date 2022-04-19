@@ -1,0 +1,1875 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f7f2f2;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+
+.puntosChicos{
+    width: 20%;
+    margin: 20px;
+}
+
+.navContainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMenu{
+    top: 35px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5em;
+    position: absolute;
+    right: 30px;
+    padding: 10px;
+    width: 40%;
+}
+
+.navLabel{
+    display: block;
+    cursor: pointer;
+}
+
+.navMenu{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center; 
+    z-index: 3;
+    clip-path: circle(0 at top);
+    transition: clip-path 0.5s ease-in-out;
+    box-shadow: 3px 10px 15px 1px rgb(202, 198, 198);  
+    position: fixed;   
+    
+}
+
+.navInput:checked + .navMenu{
+    clip-path: circle(100% at center);
+}
+
+.menuH{
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    z-index: 5;
+    background: none;
+}
+
+
+.menuItems{
+    color: #34B0BE;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+    font-size: 10px;
+}
+
+.menuItems::after{
+    content: "";
+    display: block;
+    background:#34B0BE;
+    width: 80%;
+    margin-top: 1px;
+    height: 1.5px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+    
+}
+
+.menuItems:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+}
+
+
+.imagenPerson {
+    display: flex;  
+    margin: 10px; 
+    width: 80%;
+   
+}
+
+.vector{
+    width: 130px;
+    
+}
+
+.persona{
+    position: absolute;   
+    left: 20%;   
+    background:none; 
+    height: auto;
+    width: 80px;
+    top: 70px;
+}
+
+
+.nombre{
+    font-weight: bold;
+    color: #FF4F6F;
+    margin: 5px 0px 5px 0px;
+    font-size: 16px;    
+}
+
+.profesion{
+    margin: 5px 0;
+    font-weight: bold; 
+    font-size: 20px;  
+}
+
+.nombreProfesion{
+    position: relative;
+    top:-2.5rem;
+    right: -25px;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;  
+    height: 11%;
+    background: none;
+}
+
+.redesSociales div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #34B0BE;
+    border-radius: 50%;
+    padding: 1px;
+    width: 20%;
+}
+
+.redesSociales div img{
+  width: 80%;
+}
+
+hr{
+    margin: 5px 0;
+    width: 75%;
+}
+
+.contactame{
+    display: flex;
+    width: 90%;
+}
+
+.contactame h4, svg{
+    background: none;
+}
+
+
+.contactame button{
+    display: flex;
+    width: 85%;
+    height: 15px; 
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FF4F6F;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.contactame button h4{
+    font-size: 8px;
+    font-weight: normal;
+}
+
+.contactame button img{
+    width: 15%;    
+}
+
+.serviciosCajas{
+    display: flex;
+    width: 160%;
+    overflow: hidden;
+    margin: 30px;
+    height: 120px;
+    overflow-y: scroll;    
+}
+
+.servicios{
+    position: relative;
+    width: 43%;        
+}
+
+.servicios h2{
+    margin-left: 10px;
+    color: #FF4F6F;
+    font-size: small;
+}
+
+.servicios h2, .servicios label{
+    position: absolute;
+    top: -25px;
+    width: 17px;
+    height: 17px;    
+}
+
+.servicios h3{
+    font-size: 12px;
+}
+
+.servicios input{
+    display: none;
+}
+
+.labelFlecha{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #a0999a;
+}
+
+.labelFlecha img{
+    background:none;
+}
+
+
+input[id="flechaIzq"]:checked ~ .serviciosP{
+    transform: translate(30px, 0);
+        
+} 
+
+input[id="flechaIzq"]:checked + label[for="flechaIzq"]{
+    background-color: #FF4F6F;
+}
+
+input[id="flechaDer"]:checked ~ .serviciosP{
+    transform: translate(-170px,0);    
+}
+input[id="flechaDer"]:checked + label[for="flechaDer"]{
+    background-color: #FF4F6F;
+}
+
+.servicios p{
+    color: #a0999a;
+    font-size: 10px;
+}
+
+.servicios label[for="flechaIzq"]{
+    left: 120px;
+}
+
+.servicios label[for="flechaDer"]{
+    left: 160px;
+}
+
+.serviciosP{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 50%;
+    position: relative;    
+    margin: 0 2%;  
+    background-color: #FFFFFF;
+    padding: 5px;
+    transform: translate(0,0,0);
+    transition: all 600ms;
+    align-items: center;
+    gap: 5px;
+       
+}
+
+.serviciosP img{
+    padding: 5px 12px 5px 12px;
+    height: 50px;
+    width: 50px;
+}
+
+.serviciosP img, h3, p{
+    background: none;
+}
+
+.servicios input{
+    display: none;
+}
+
+
+.acercaDeMi{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 10px;  
+}
+
+.acercaDeMi p, .acercaDeMi img{
+    background: none;
+    min-width: 20%;
+    font-size: 10px;    
+}
+
+.puntosGrandes{
+    position: absolute;
+    height: 20%;
+    z-index: 0;
+    left: 60%;
+    width: 30%;
+    }
+
+.acercaDeMi h2{
+    width: 50%;
+    color: #FF4F6F;
+    padding: 5%;
+    font-size: small;
+}
+
+.acercaDeMi p{
+    color: #a0999a;
+    width: 100%;
+    font-size: 10px;
+    padding: 5% 10%;
+}
+
+.formacion{
+    display: flex;
+    margin: 10%;
+    width: 120%;
+    justify-content: space-around;
+}
+
+.formacion div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;   
+}
+.formacion img{
+   width: 50px;
+   margin: 10px;
+}
+
+.misHabilidades{
+    display: flex;
+    flex-direction: column;
+    width: 60%;    
+}
+
+.misHabilidades h2{
+    width: 30%;
+    color: #FF4F6F;
+    margin: 10px;
+    font-size: small;
+}
+
+.misHabilidades article{
+    display: flex;
+    align-items: center;
+    margin: 5%;
+    width: 150%;
+    padding-left: 15px;
+}
+
+.misHabilidades div{
+    display: flex;
+    margin-left: 10%;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    color:#d1cecf;
+    box-shadow: 0px -33px #FFFFFF inset,
+    40px 0 #34B0BE inset,
+    5px 5px 15px 1px;
+    height: 35px;   
+    align-items: center;
+    width: 50px;
+}
+
+.misHabilidades article div h2{
+    color:#34B0BE;
+    background: none;
+}
+
+.misHabilidades article h3{
+    padding-left: 15%;
+    font-size: small;    
+}
+
+.miPortafolio{
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    width: 55%;
+    position: relative;
+    background: none;
+    margin-left: 20%;           
+}
+
+.miPortafolio h4{
+    background: none;
+    font-size: 10px;
+    padding: 5%;   
+}
+
+.tituloPortafolio{
+    width: 30%;
+    color: #FF4F6F;
+    margin: 5% 3%;
+    font-size: small;
+}
+
+.itemCarrusel{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 2%;
+    box-shadow: 0px 0px 10px 2px rgb(228, 222, 222);
+    border-radius: 10px;
+    transform: translate3d(0,0,0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.itemCarrusel img{
+    height: 100px;
+    width: 130px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.miniCarrusel{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: none;
+}
+
+.miniCarruselItem{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #FF4F6F;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 5px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.miniCarruselItem:hover{
+    transform: scale(2.5);   
+}
+
+.miniCarruselItem img{
+    display:inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.miniCarruselItem:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .itemCarrusel{
+    animation: none;
+    transform: translate3d(calc(25%*1),0,0);
+}
+
+input[id="1"]:checked ~ .miniCarrusel .miniCarruselItem[for="1"]{
+    background-color: #FF4F6F;
+}
+
+input[id="2"]:checked ~ .itemCarrusel{
+    animation: none;
+    transform: translate3d(calc(-50%*2),0,0);
+}
+
+input[id="2"]:checked ~ .miniCarrusel .miniCarruselItem[for="2"]{
+    background-color: #FF4F6F;
+}
+
+input[id="3"]:checked ~ .itemCarrusel{
+    animation: none;
+    transform: translate3d(calc(-100%*2),0,0);
+}
+
+input[id="3"]:checked ~ .miniCarrusel .miniCarruselItem[for="3"]{
+    background-color: #FF4F6F;
+}
+
+@keyframes autoplay {
+    33.3%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    66.6%{
+        transform: translate3d(calc(-50% * 2), 0, 0);
+    }
+    99.9%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+.contacto{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.fonYellow{
+    display: none;
+}
+
+.mailYellow{
+    display: none;
+}
+
+.tituloContacto{
+    width: 20%;
+    color: #FF4F6F;
+    margin: 10% 3%;
+    font-size: small;
+}    
+
+.contactoEmail, .contactoCel{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    height: 40%;
+}
+
+.contactoEmail h3, .contactoEmail p, .contactoCel h3, .contactoCelp{
+    background-color: #FFFFFF;
+}
+
+.contactoEmail p{
+    color: #a0999a;    
+    font-size: 10px;
+}
+
+.contactoCel p{
+    color: #a0999a;
+    font-size: 10px;
+}
+
+.contactoEmail img, .contactoCel img{
+    margin: 10px;
+    background: none; 
+    width: 40px;
+    padding: 0 5px;   
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: #34B0BE;
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+footer p{
+    font-size: 10px;
+}
+
+@media screen and (min-width: 280px)  {
+    .persona{
+        width: 29%;
+        left: 12%;
+        top: 14.5%;           
+    }
+
+    .vector{
+        width: 130px;
+    }
+
+    .nombreProfesion{
+        left: 0;
+    }
+
+}  
+
+@media screen and (min-width: 320px)  {
+    .vector{
+        width: 100%;
+    }   
+    
+    .persona{
+        width: 24%;
+        left: 12%; 
+        top: 19%;          
+    }
+
+    .nombreProfesion{
+        left: 0;
+    }
+
+}  
+
+@media screen and (min-width: 360px)  {
+    .persona{
+        width: 29%;
+        left: 12%;
+        top: 14.5%;           
+    }
+
+    .vector{
+        width: 170px;
+    }
+
+    .redesSociales{
+        height: 9%;
+        width: 60%;
+    }
+
+}  
+
+    @media screen and (min-width: 375px)  {
+        .navMenu a{
+            font-size: 12px;
+        }
+
+        .vector{
+            width: 200px;
+        }
+
+        .persona{
+            width: 33%;
+            left: 12%; 
+            top: 110px;          
+        }
+
+        .redesSociales{
+            height: 8.0%;
+        }
+
+        .contactoEmail, .contactoCel{
+            width: 30%;
+        }
+}
+
+@media screen and (min-width: 390px)  {
+    .vector{
+        width: 170px;
+    }
+
+    .persona{
+        width: 27.5%;
+        top: 110px;           
+    }
+
+    .redesSociales{
+        width: 55%;
+        height: 9%;
+    }
+
+}
+
+@media screen and (min-width: 412px)  {
+    .vector{
+        width: 180px;
+    }
+
+    .persona{
+        width: 27%;
+        top: 12.5%;           
+    }
+
+    .redesSociales{
+        width: 55%;
+        height: 9%;
+    }
+
+}
+
+    @media screen and (min-width: 425px) {
+        .navMenu a{
+            font-size: 14px;
+        }
+        .nombre{
+            font-size: 25px;            
+        }
+
+        .imagenPerson {
+            width: 90%;           
+        }
+
+        .vector{
+            width: 210px;
+        }
+                
+        .persona{
+            left: 12%;
+            width: 30.5%;
+            top: 117px;
+        }
+        
+        .profesion{
+            font-size: 25px;  
+            width: 80%;            
+            background: none;
+        }
+        
+        .nombreProfesion{
+            padding-left: 2%;
+            background: none;
+        }
+        
+        .redesSociales{
+            height: 10%;
+            width: 80%;
+        }
+        
+        .redesSociales div{
+            width: 20%;
+            height: auto;
+        }
+        
+        .redesSociales div img{
+          width: 65%;          
+        }
+        
+        hr{
+            width: 90%;
+        }
+        
+        .contactame{
+            width: 90%;
+        }
+        
+        .contactame button{
+            width: 90%;
+            height: 30px; 
+        }
+
+        .contactame button h4{
+            font-size: 12px;
+        }
+        
+        .contactame button img{
+            width: 15%;    
+        }
+        
+        .serviciosCajas{
+            margin-top: 50px;
+            width: 160%;
+            height: 250px;
+        }
+        
+        .servicios h2{
+            margin-left: 5px;
+            font-size: 20px;
+            top: -40px;
+            font-weight: bold;
+        }
+        
+        .servicios h3{
+            font-size: 16px;
+        }
+        
+        .servicios p{
+            font-size: 12px;
+        }
+        
+        .servicios label[for="flechaIzq"], .servicios label[for="flechaDer"]{
+            width: 25px;
+            height: 25px;
+            top: -40px;
+            left: 220px;
+        }
+        
+        .servicios label[for="flechaDer"]{
+            left: 300px;
+        }
+       
+        .serviciosP img{
+            padding: 5px 12px 5px 12px;
+            height: 60px;
+            width: 60px;
+        }
+        
+        .acercaDeMi{
+            margin-top: 20px;  
+        }
+        
+        .puntosGrandes{
+            width: 40%;
+        }
+        
+        .acercaDeMi h2{
+            font-size: 20px;
+        }
+        
+        .acercaDeMi p{
+            font-size: 12px;
+            width: 111%;
+        }
+        
+        .formacion{
+            width: 120%;
+        }
+        
+        .formacion div{
+            width: 50%;
+        }
+
+        .formacion img{
+           width: 65px;
+        }
+        
+        .misHabilidades{
+            width: 60%;    
+        }
+        
+        .misHabilidades h2{
+            font-size: 20px;
+        }
+        
+        .misHabilidades article{
+            width: 150%;
+            padding-left: 15px;
+        }
+        
+        .misHabilidades div{
+            box-shadow: 0px -33px #FFFFFF inset,
+            50px 0 #34B0BE inset,
+            5px 5px 15px 1px;                      
+            width: 60px;
+        }
+                
+        .misHabilidades article h3{
+            padding-left: 15%;
+            font-size: medium;    
+        }
+        
+        .miPortafolio h4{
+            font-size: 12px;
+        }
+        
+        .tituloPortafolio{
+            font-size: 20px;
+        }
+        
+        
+        .itemCarrusel img{
+            height: 120px;
+            width: 150px;
+        }
+        
+        .miniCarruselItem{
+            width: 12px;
+            height: 12px;
+        }
+                        
+        .tituloContacto{
+            font-size: 20px;
+        }    
+        
+        .contactoEmail, .contactoCel{
+            width: 30%;
+            height: 40%;
+        }
+        
+        .contactoEmail h3, .contactoEmail p, .contactoCel h3, .contactoCelp{
+            font-size: 14px;
+        }
+        
+        .contactoEmail p{
+            color: #a0999a;    
+            font-size: 12px;
+        }
+        
+        .contactoCel p{
+            color: #a0999a;
+            font-size: 12px;
+        }
+        
+        .contactoEmail img, .contactoCel img{
+            width: 50px;
+        }    
+        
+        footer p{
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (min-width: 540px) {
+        .vector{
+            width: 90%;            
+        }
+        
+        .persona{
+            width: 33%;
+            top: 18.5%;
+        }
+        
+        .nombreProfesion{
+            padding-left: 0%;
+            left: -20px;
+        }
+        
+        .redesSociales{
+            height: 9%;
+            width: 85%;
+        }       
+        
+        .contactame{
+            width: 90%;
+        }
+        
+        .contactame button{
+            width: 100%;
+            height: 35px; 
+        }
+
+        .contactame button h4{
+            font-size: 14px;
+        }       
+    }
+
+    @media screen and (min-width: 650px) {
+        .vector{
+            width: 300px;            
+        }
+        
+        .persona{
+            width: 29%;
+            top: 150px;
+        }
+        
+        .nombreProfesion{
+            left: 10px;
+            width: 50%;
+        }
+        
+        .contactame{
+            width: 60%;
+        }
+        .redesSociales{
+            height: 9%;
+            width: 50%;
+        }
+    }
+
+    @media screen and ( min-width: 768px ){
+        .navMenu{
+            position: fixed;
+            top: 2px;
+            left: 20px;
+            flex-direction: row;
+            align-items: baseline;
+            width: 93%;
+            height: 40px;  
+            clip-path: none;              
+        }
+
+        .navMenu a{
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .vector{
+            width: 350px;
+        }
+
+        .nombre{
+            font-size: 45px;
+        }
+
+        .profesion{
+           font-size:60px;
+           font-weight: bold;
+        }
+       
+        .contactame button h4{
+            font-size: 30px;
+        }
+
+        .menuH{
+            display: none;
+        }
+
+        .puntosChicos{
+            padding-top: 5%;
+            width: 20%;
+            margin: 20px;
+        }
+        
+        .imagenPerson {
+            display: flex;  
+            margin: 10px; 
+            width: 100%;
+        }
+        
+               
+        .persona{
+            left: 9%;   
+            width: 28.5%;
+            top: 210px;
+        }
+               
+        .nombreProfesion{
+            position: relative;
+            top:-2.5rem;
+            left: 10px;
+            width: 80%;            
+        }
+        
+        .redesSociales{
+            width: 40%;  
+            height: 8%;
+        }
+        
+        .redesSociales div img{
+          width: 65%;
+        }
+        
+        hr{
+            margin: 5px 0;
+            width: 80%;
+        }
+        
+        .contactame{
+            display: flex;
+            width: 80%;
+        }
+               
+        .contactame button{
+            width: 80%;
+            height: 40px;
+            justify-content: space-evenly;
+        }
+
+        .contactame button h4{
+            font-size: 16px;
+        }
+
+        .serviciosCajas{
+            width: 220%;
+            height: auto;
+            overflow:visible;
+        }
+        
+        .servicios{
+            position: relative;
+            width: 43%;  
+            margin-top: 20px;
+        }
+        
+        .servicios h2{
+            font-size: 30px;
+        }
+        
+        .servicios h3{
+            font-size: 18px;
+            text-align: center;
+        }      
+        
+        .servicios p{
+            font-size: 14px;
+        }
+        
+        .servicios label[for="flechaDer"], .servicios label[for="flechaIzq"]{
+            left: 400px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .servicios label[for="flechaIzq"]{
+            left: 300px;
+        }
+
+        .serviciosP{
+            margin-top: 20px;
+        }
+        .serviciosP img{
+            padding: 5px 12px 5px 12px;
+            height: 90px;
+            width: 90px;
+        }      
+        
+        .puntosGrandes{
+            height: 40%;
+            width: 40%;            
+        }
+        
+        .acercaDeMi h2{
+            font-size: 30px;
+        }
+        
+        .acercaDeMi p{
+            width: 100%;
+            font-size: 14px;
+            padding-top: 0;
+        }
+        
+        .formacion{
+            justify-content: space-between;
+        }
+        
+        .formacion img{
+           width: 90px;           
+        }
+        
+        .misHabilidades{
+            width: 80%;    
+        }
+        
+        .misHabilidades h2{
+            width: 30%;
+            font-size: 30px;
+        }
+        
+        .misHabilidades article{
+            width: 100%;
+        }
+        
+        .misHabilidades div{
+            margin-left: 20%;
+            box-shadow: 0px -53px #FFFFFF inset,
+            60px 0 #34B0BE inset,
+            5px 5px 15px 1px;
+            width: 80px;
+            height: auto;
+        }
+        
+        .misHabilidades article h3{
+            font-size: 22px;    
+        }
+        
+        .miPortafolio{
+            width: 50%;
+            height: 340px;
+        }
+
+        .miPortafolio h4{
+            font-size: 14px;
+        }
+        
+        .tituloPortafolio{
+            font-size: 30px;
+        }
+        
+        .itemCarrusel img{
+            height: 250px;
+            width: 300px;
+        }
+        
+        .miniCarruselItem{
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .contacto{
+            width: 90%;
+        }
+        
+        .tituloContacto{
+            font-size: 30px;
+        }    
+        
+        .contactoEmail, .contactoCel{
+            width: 20%;
+            height: 50%;
+        }
+        
+        .contactoEmail p, .contactoCel p{
+            font-size: 14px;
+        }
+                
+        .contactoEmail img, .contactoCel img{
+            width: 60px;
+        }       
+
+        .mailBlue{
+            display: none;
+        }
+
+        .mailYellow{
+            display: flex;
+        }    
+
+        .fonBlue{
+            display: none;
+        }
+
+        .fonYellow{
+            display: flex;
+        }    
+        
+        footer{
+            width: 95%;
+        }
+        
+        footer p{
+            font-size: 14px;
+        }
+        
+    }
+
+    @media screen and (min-width: 820px){
+            .vector{
+                width: 400px;
+            }
+            
+            .persona{
+                left: 12%;   
+                width: 30%;
+                top: 19%;
+            }
+
+            .nombreProfesion{
+                left: 0;
+            }
+                   
+            .redesSociales{
+                width: 43%;  
+            }
+            
+            .contactame button h4{
+                font-size: 18px;
+            }
+            
+            .formacion{
+                width: 95%;
+            }           
+    }
+
+    @media screen and (min-width: 912px){
+        .persona{
+            left: 10%;   
+            width: 27%;
+            top: 17.5%;
+        }
+               
+        .redesSociales{
+            width: 43%;
+            height: 10%;  
+        }
+    }
+
+    @media screen and ( min-width: 1024px ){
+        .navMenu a{
+            font-size: 18px;
+        }
+        
+        .nombre{
+            font-size: 60px;
+        }
+
+        .profesion{
+           font-size:80px;
+        }
+       
+        .puntosChicos{
+            width: 30%;
+            margin: 30px;
+        }
+        
+        .imagenPerson {
+            width: 95%;            
+        }
+        
+        .vector{
+            width: 95%;            
+        }
+        
+        .persona{
+            left: 10%;   
+            width: 28%;
+            top: 375px;
+        }
+               
+        .nombreProfesion{
+           
+            width:50%;            
+        }
+        
+        .redesSociales{
+            width: 50%;  
+            height: 10%;
+        }
+               
+        .contactame button{
+            width: 80%;
+            height: 50px;
+        }
+
+        .contactame button h4{
+            font-size: 20px;
+        }
+
+        .serviciosCajas{
+            width: 205%;
+            height: auto;
+            overflow:visible;
+        }
+        
+        .servicios h2{
+            font-size: 35px;
+        }
+        
+        .servicios h3{
+            font-size: 20px;
+        }      
+        
+        .servicios p{
+            font-size: 16px;
+        }
+        
+        .serviciosP img{
+            height: 100px;
+            width: 100px;
+        }      
+        
+        .puntosGrandes{
+            height: 45%;
+            width: 35%;            
+        }
+        
+        .acercaDeMi h2{
+            font-size: 40px;
+        }
+        
+        .acercaDeMi p{
+            width: 110%;
+            font-size: 16px;
+        }
+        
+        .formacion{
+            width: 120%;
+        }
+
+        .formacion div{
+            width: 40%;
+        }
+        
+        .formacion img{
+           width: 100px;           
+        }
+        
+        .misHabilidades{
+            width: 80%;    
+        }
+        
+        .misHabilidades h2{
+            font-size: 40px;
+        }
+        
+        .misHabilidades article{
+            width: 95%;
+        }
+        
+        .misHabilidades div{
+            box-shadow: 0px -63px #FFFFFF inset,
+            80px 0 #34B0BE inset,
+            5px 5px 15px 1px;
+            width: 105px;
+        }
+        
+        .misHabilidades article h3{
+            font-size: 25px;    
+        }
+        
+        .miPortafolio{
+            height: 357px;            
+        }
+
+        .miPortafolio h4{
+            font-size: 16px;
+        }
+        
+        .tituloPortafolio{
+            font-size: 40px;
+        }
+        
+        .itemCarrusel img{
+            height: 250px;
+            width: 320px;
+        }
+
+        .miniCarrusel{
+            bottom: 23px;
+        }
+        
+        .miniCarruselItem{
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            
+        }
+
+        .tituloContacto{
+            font-size: 40px;
+        }    
+        
+        .contactoEmail, .contactoCel{
+            width: 25%;
+            height: 165px;
+            padding-bottom: 5px;
+        }
+        
+        .contactoEmail p, .contactoCel p{
+            font-size: 16px;
+        }
+                
+        .contactoEmail img, .contactoCel img{
+            width: 80px;
+        }       
+
+        .mailBlue{
+            display: none;
+        }
+
+        .mailYellow{
+            display: flex;
+        }    
+
+        .fonBlue{
+            display: none;
+        }
+
+        .fonYellow{
+            display: flex;
+        }    
+        
+        footer{
+            width: 95%;
+        }
+        
+        footer p{
+            font-size: 18px;
+        }
+        
+    }
+
+    @media screen and ( min-width: 1280px ){
+        .persona{
+            left: 9%;   
+            width: 30%;
+            top: 56.5%;
+        }
+                
+        .redesSociales{
+            width: 55%;  
+        }
+               
+        .contactame button h4{
+            font-size: 22px;
+        }
+     
+        .servicios h3{
+            font-size: 25px;
+        }      
+        
+        .servicios p{
+            font-size: 18px;
+            padding: 5px;
+        }
+        
+        .formacion{
+            width: 100%;
+        }
+
+        .formacion img{
+           width: 105px;           
+        }     
+    }
+
+    @media screen and ( min-width: 1440px ){
+        .navMenu{
+            height: 50px;
+        }
+        
+        .navMenu > a {
+            font-size: 25px;
+        }
+        
+        .nombre{
+            font-size: 70px;
+        }
+
+        .profesion{
+           font-size:100px;
+        }
+       
+        .puntosChicos{
+            width: 30%;
+            margin: 30px;
+        }
+        
+        .imagenPerson {
+            width: 93%;
+        }
+        
+        .vector{
+            width: 96%;            
+        }
+        
+        .persona{
+            left: 7%;   
+            width: 28%;
+            top: 495px;
+        }
+               
+        .redesSociales{
+            width: 55%;  
+            height: 10%;
+        }
+               
+        .contactame button{
+            width: 80%;
+            height: 60px;
+        }
+
+        .contactame button h4{
+            font-size: 30px;
+        }
+
+        .servicios label[for="flechaDer"], .servicios label[for="flechaIzq"]{
+            left: 700px;
+            height: 50px;
+            width: 50px;
+            top: 0px;
+        }
+
+        .servicios label[for="flechaIzq"]{
+            left: 500px;
+        }
+        
+
+        .servicios h2{
+            font-size: 50px;
+            top: 0;
+        }
+        
+        .servicios h3{
+            font-size: 30px;
+        }      
+        
+        .servicios p{
+            font-size: 20px;
+            padding: 10px;
+        }
+        
+        .serviciosP{
+            margin-top: 100px;
+        }
+
+        .serviciosP img{
+            height: 110px;
+            width: 110px;
+        }      
+        
+        .acercaDeMi h2{
+            font-size: 50px;
+        }
+        
+        .acercaDeMi p{
+            font-size: 20px;
+        }
+        
+        .formacion{
+            width: 120%;
+        }
+
+        .formacion div{
+            width: 40%;
+        }
+        
+        .formacion img{
+           width: 150px;           
+        }
+        
+        .misHabilidades{
+            width: 80%; 
+            padding-left: 20px;
+        }
+        
+        .misHabilidades h2{
+            font-size: 50px;
+        }
+        
+        .misHabilidades article{
+            width: 90%;
+        }
+        
+        .misHabilidades div{
+            box-shadow: 0px -75px #FFFFFF inset,
+            100px 0 #34B0BE inset,
+            5px 5px 15px 1px;
+            width: 130px;
+            justify-content: flex-start;
+        }
+        
+        .misHabilidades article h3{
+            font-size: 33px;    
+        }
+        
+        .miPortafolio{
+            height: 470px;
+        }
+
+        .miPortafolio h4{
+            font-size: 23px;
+        }
+        
+        .tituloPortafolio{
+            font-size: 50px;
+        }
+        
+        .itemCarrusel img{
+            height: 320px;
+            width: 400px;
+        }
+
+        .miniCarrusel{
+            bottom: 30px;
+        }
+        
+        .miniCarruselItem{
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            
+        }
+
+        .tituloContacto{
+            font-size: 50px;
+        }    
+        
+        .contactoEmail, .contactoCel{
+            width: 25%;
+            height: 185px;
+            padding-bottom: 10px;
+        }
+        
+        .contactoEmail p, .contactoCel p{
+            font-size: 20px;
+        }
+                
+        .contactoEmail img, .contactoCel img{
+            width: 100px;
+        }       
+
+        footer{
+            width: 90%;
+        }
+        footer p{
+            font-size: 20px;
+        }
+        
+    }
+
+    @media screen and ( min-width: 2560px ){
+        .navMenu{
+            height: 70px;
+            align-items: center;
+        }
+        
+        .navMenu > a {
+            font-size: 35px;
+        }
+        
+        .nombre{
+            font-size: 90px;
+        }
+
+        .profesion{
+           font-size:120px;
+           width: 80%;
+        }
+
+        .nombreProfesion{
+            left: 480px;
+        }
+       
+        .imagenPerson {
+            width: 100%;
+            
+        }
+        
+        .vector{
+            width: 160%;            
+        }
+        
+        .persona{
+            left: 7%;   
+            width: 28%;
+            top: 820px;
+        }
+               
+        .redesSociales{
+            width: 56%;  
+            height: 12%;
+            margin: 30px 0;
+        }
+               
+        .contactame button{
+            width: 80%;
+            height: 120px;
+            margin: 20px 0;
+        }
+
+        .contactame button h4{
+            font-size: 50px;
+        }
+
+        .servicios label[for="flechaDer"], .servicios label[for="flechaIzq"]{
+            left: 700px;
+            height: 90px;
+            width: 90px;
+            top: 0px;
+        }
+
+        .servicios label[for="flechaIzq"]{
+            left: 500px;
+        }
+        
+
+        .servicios h2{
+            font-size: 80px;
+            top: 0;
+        }
+        
+        .servicios h3{
+            font-size: 50px;
+        }      
+        
+        .servicios p{
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        .serviciosP{
+            margin-top: 150px;
+        }
+
+        .serviciosP img{
+            height: 160px;
+            width: 160px;
+        }      
+        
+        .acercaDeMi h2{
+            font-size: 80px;
+        }
+        
+        .acercaDeMi p{
+            font-size: 30px;
+        }
+        
+        .formacion{
+            width: 120%;
+        }
+
+        .formacion div{
+            width: 40%;
+        }
+        
+        .formacion img{
+           width: 220px;           
+        }
+        
+        .misHabilidades{
+            width: 80%; 
+            padding-left: 20px;
+        }
+        
+        .misHabilidades h2{
+            font-size: 80px;
+        }
+        
+        .misHabilidades article{
+            width: 90%;
+        }
+        
+        .misHabilidades div{
+            box-shadow: 0px -130px #FFFFFF inset,
+            170px 0 #34B0BE inset,
+            5px 5px 15px 1px;
+            width: 200px;
+            height: 140px;
+            justify-content: flex-start;
+        }
+        
+        .misHabilidades article h3{
+            font-size: 50px;    
+        }
+        
+        .miPortafolio{
+            height: 770px;
+        }
+
+        .miPortafolio h4{
+            font-size: 40px;
+        }
+        
+        .tituloPortafolio{
+            font-size: 80px;
+        }
+        
+        .itemCarrusel img{
+            height: 550px;
+            width: 700px;
+        }
+
+        .miniCarrusel{
+            bottom: 50px;
+            justify-content: space-between;
+            width: 30%;
+            right: 350px;
+        }
+        
+        .miniCarruselItem{
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            
+        }
+
+        .tituloContacto{
+            font-size: 80px;
+        }    
+        
+        .contactoEmail, .contactoCel{
+            width: 15%;
+            height: 400px;
+            padding-bottom: 30px;
+        }
+        
+        .contactoEmail p, .contactoCel p{
+            font-size: 35px;
+        }
+                
+        .contactoEmail img, .contactoCel img{
+            width: 200px;
+        }       
+
+        footer{
+            width: 90%;
+        }
+        footer p{
+            font-size: 35px;
+        }
+        
+    }
