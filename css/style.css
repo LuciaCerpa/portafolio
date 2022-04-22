@@ -1780,7 +1780,7 @@ footer p{
             font-size: 30px;
         }
 
-        .cv{
+        /* .cv{
             display: flex;
             justify-content: center;            
             align-items: center;
@@ -1797,7 +1797,7 @@ footer p{
             box-shadow: 0px 0px 0px 5px #9531ae;
             cursor: pointer;
             text-decoration: none;                     
-        }
+        } */
         
         .formacion{
             width: 120%;
