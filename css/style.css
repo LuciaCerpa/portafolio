@@ -1798,6 +1798,13 @@ footer p{
             cursor: pointer;
             text-decoration: none;                     
         } */
+
+        .cv{
+            font-size: 2rem;            
+            color: #FF4F6F;
+            text-decoration: none;
+            cursor: pointer;
+        }
         
         .formacion{
             width: 120%;
