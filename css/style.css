@@ -1771,12 +1771,28 @@ footer p{
             width: 160px;
         }      
         
-        .acercaDeMi h2{
+        .acercaDeMi h2{            
             font-size: 80px;
         }
-        
+
         .acercaDeMi p{
+            position: relative;
             font-size: 30px;
+        }
+
+        .cv{
+            width: 10rem;
+            height: 5rem;
+            font-size: 2.5rem;
+            background-color: rgba(187, 58, 180, 0.871);
+            color: #FFFFFF;
+            position: absolute;
+            top: 15rem;
+            left: 10rem;
+            border-radius: 10px;
+            border-color: #FFF;
+            box-shadow: 0px 0px 0px 5px #9531ae;
+            cursor: pointer;
         }
         
         .formacion{
@@ -1790,7 +1806,8 @@ footer p{
         .formacion img{
            width: 220px;           
         }
-        
+
+       
         .misHabilidades{
             width: 80%; 
             padding-left: 20px;
