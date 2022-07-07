@@ -160,6 +160,7 @@ hr{
 .contactame{
     display: flex;
     width: 90%;
+    
 }
 
 .contactame h4, svg{
@@ -173,16 +174,26 @@ hr{
     height: 15px; 
     justify-content: space-around;
     align-items: center;
-    background-color: #FF4F6F;
-    color: white;
+    background-color: #FF4F6F;    
     padding: 5px;
     border: none;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    cursor: pointer;
 }
 .contactame button h4{
     font-size: 8px;
-    font-weight: normal;
+    font-weight: normal;    
+}
+
+.contactame button a{
+    text-decoration: none;
+    background: none;
+    color: #f7f2f2;
+}
+
+.contactame button:hover{
+    background-color:#34B0BE;
 }
 
 .contactame button img{
@@ -475,7 +486,8 @@ input[id="flechaDer"]:checked + label[for="flechaDer"]{
 .miniCarruselItem img{
     display:inline-block;
     max-width: none;
-    height: 100%;
+    height: 90%;
+    width: 90%;
     transform: scale(1);
     opacity: 0;
     transition: all 300ms;
@@ -1405,7 +1417,7 @@ footer p{
         
         .itemCarrusel img{
             height: 250px;
-            width: 320px;
+            width: 210px;
         }
 
         .miniCarrusel{
