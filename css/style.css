@@ -148,8 +148,9 @@
     width: 20%;
 }
 
-.redesSociales div img{
-  width: 80%;
+.redesSociales div a{
+  width: 85%;
+  text-align: center;
 }
 
 hr{
