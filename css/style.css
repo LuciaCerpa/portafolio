@@ -346,6 +346,21 @@ input[id="flechaDer"]:checked + label[for="flechaDer"]{
     padding: 5% 10%;
 }
 
+.cv{
+    font-size: 1.2em;
+    text-decoration: none;
+    border: .5px solid rgb(185, 44, 91);
+    border-left: none;
+    margin-left: 30%;
+    width: 20%;
+    text-align: center;
+    border-radius: 1rem;
+    border-style: inherit;
+    box-shadow: .3rem .3rem .5rem 0px rgba(108, 43, 43, 0.462);
+    color: #be34bea1;
+    padding: 1%;
+}
+
 .formacion{
     display: flex;
     margin: 10%;
